@@ -1,0 +1,37 @@
+{
+  "name": "zd-ui",
+  "version": "0.0.1",
+  "description": "Mobile Ui Components by zsdx",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xm-zsdx/zd-ui.git"
+  },
+  "keywords": [
+    "ui"
+  ],
+  "author": "zsdxfe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xm-zsdx/zd-ui/issues"
+  },
+  "homepage": "https://github.com/xm-zsdx/zd-ui#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "husky": "^4.3.0",
+    "zsdxfe": "0.0.2"
+  },
+  "hooks": {
+    "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+  },
+  "lint-staged": {
+    "*.md": "prettier --write",
+    "*.{ts,tsx,js,vue,less}": "prettier --write",
+    "*.{ts,tsx,js,vue}": "eslint --fix",
+    "*.{vue,css,less}": "stylelint --fix"
+  }
+}

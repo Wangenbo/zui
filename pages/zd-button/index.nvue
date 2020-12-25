@@ -1,0 +1,69 @@
+<template>
+	<view>
+        <zd-demo-block title="按钮类型">
+            <zd-button text="主要按钮" type="primary"></zd-button>
+            <zd-button text="信息按钮" type="info"></zd-button>
+            <zd-button text="默认按钮" type="default"></zd-button>
+            <zd-button text="危险按钮" type="danger"></zd-button>
+            <zd-button text="警告按钮" type="warning"></zd-button>
+        </zd-demo-block>
+
+        <zd-demo-block title="朴素类型">
+            <zd-button text="主要按钮" plain type="primary"></zd-button>
+            <zd-button text="信息按钮" plain type="info"></zd-button>
+            <zd-button text="默认按钮" plain type="default"></zd-button>
+            <zd-button text="危险按钮" plain type="danger"></zd-button>
+            <zd-button text="警告按钮" plain type="warning"></zd-button>
+        </zd-demo-block>
+
+        <zd-demo-block title="细边框">
+            <zd-button text="细边框按钮" plain hairline type="primary"></zd-button>
+            <zd-button text="细边框按钮" plain hairline type="info"></zd-button>
+        </zd-demo-block>
+
+        <zd-demo-block title="禁用状态">
+            <zd-button text="禁用状态" disabled type="primary"></zd-button>
+            <zd-button text="禁用状态" disabled type="info"></zd-button>
+        </zd-demo-block>
+
+        <zd-demo-block title="按钮形状">
+            <zd-button text="方形按钮" square disabled type="primary"></zd-button>
+            <zd-button text="圆形按钮" round disabled type="info"></zd-button>
+        </zd-demo-block>
+
+        <zd-demo-block title="按钮尺寸">
+            <zd-button text="大号按钮" size="large" type="primary"></zd-button>
+            <zd-button text="普通按钮" size="normal" type="primary"></zd-button>
+            <zd-button text="小型按钮" size="small" type="primary"></zd-button>
+            <zd-button text="迷你按钮" size="mini" type="primary"></zd-button>
+        </zd-demo-block>
+
+        <zd-demo-block title="块级元素">
+            <zd-button text="块级元素" block type="primary"></zd-button>
+        </zd-demo-block>
+
+        <zd-demo-block title="自定义颜色">
+            <zd-button text="单色按钮" color="#7232dd"></zd-button>
+            <zd-button text="单色按钮" color="#7232dd" plain></zd-button>
+            <zd-button text="渐变色按钮" color="linear-gradient(to bottom right,#AD18F9,#05DFC7)"></zd-button>
+        </zd-demo-block>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+
+			};
+		}
+	}
+</script>
+
+<style lang="less">
+.test{
+    width: 100px;
+    height: 100px;
+    background-image:linear-gradient(to bottom right,#AD18F9,#05DFC7);
+}
+</style>

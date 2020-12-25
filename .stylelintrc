@@ -1,0 +1,3 @@
+{
+  "extends": ["zxdxfe/stylelint-config"]
+}
