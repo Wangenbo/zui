@@ -1,0 +1,79 @@
+<template>
+	<view class="page-container">
+        <view class="page-container-title">
+            <text class="page-container-title-text">Zui</text>
+            <text class="page-container-desc-text">适用于H5的高性能uni-app nvue UI组件</text>
+        </view>
+
+        <view class="">
+            <view class="">
+                <view class="section-header">
+                    <text class="section-header-text">基础组件</text>
+                </view>
+                <view class="block-item" @tap="fnGoTo('/pages/z-button/index')">
+                    <text class="block-item-text">Button 按钮</text>
+                </view>
+            </view>
+        </view>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				title: 'Hello'
+			}
+		},
+		onLoad() {
+
+		},
+		methods: {
+            fnGoTo(url) {
+                uni.navigateTo({
+                    url: url
+                })
+            }
+		}
+	}
+</script>
+
+<style lang="less" scoped>
+	.page-container{
+        padding: 40rpx;
+        &-title{
+            &-text{
+                font-size: 32px;
+                color: #000000;
+                padding-left: 18rpx;
+            }
+        }
+        &-desc{
+            &-text{
+                color: rgba(69, 90, 100, 0.6);
+                font-size: 14px;
+                padding-left: 18rpx;
+            }
+        }
+    }
+    .block-item{
+        background-color: #f7f8fa;
+        border-radius: 99px;
+        flex-direction: row;
+        &-text{
+           color: #323233;
+           font-weight: 600;
+           font-size: 14px;
+           padding: 18rpx;
+        }
+    }
+    .section-header{
+        margin-top: 30rpx;
+        margin-bottom: 20rpx;
+        &-text{
+            color: rgba(69, 90, 100, 0.6);
+            font-size: 14px;
+            padding-left: 18rpx;
+        }
+    }
+</style>

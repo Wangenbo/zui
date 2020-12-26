@@ -2,11 +2,11 @@
 
 ### 介绍
 
-按钮用于触发一个操作，如提交表单。
+按钮用于触发一个操作，如提交表单、页面跳转等。
 
 ### 引入
-
-
+> 通过 easycom 方式引入
+> 只要组件安装在项目的components目录下，可以不用引用、注册，直接在页面中使用
 
 ## 代码演示
 
@@ -94,6 +94,7 @@
 ### 块级元素
 
 按钮在默认情况下为行内块级元素，通过 `block` 属性可以将按钮的元素类型设置为块级元素。
+在 nvue中，Flexbox 是默认且唯一的布局模型，所以设置块级显示，需配合父元素进行设置。
 
 ```html
 <zd-button type="primary" block>块级元素</zd-button>
@@ -101,12 +102,25 @@
 
 ### 页面导航
 
-可以通过 `url` 属性进行 URL 跳转，或通过 `to` 属性进行路由跳转。
+可以通过 `to` 属性进行路由跳转。
 
 ```html
-<zd-button type="primary" url="/vant/mobile.html">URL 跳转</zd-button>
 <zd-button type="primary" to="index">路由跳转</zd-button>
 ```
+
+可以通过 `redirect` 关闭当前页面，跳转到应用内的某个页面。需要配合 `to` 使用
+
+```html
+<zd-button type="primary" to="index" redirect>路由跳转</zd-button>
+```
+
+可以通过 `switch` 跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。需要配合 `to` 使用
+
+```html
+<zd-button type="primary" to="index" switch>路由跳转</zd-button>
+```
+
+> 若 `switch` 和 `redirect` 同时存在，只会执行 `switch` 跳转。
 
 ### 自定义颜色
 
@@ -120,9 +134,9 @@
 </zd-button>
 ```
 
-> nuve 中 background-image 优先级高于 background-color，这意味着同时设置 background-image 和 background-color，background-color 被覆盖。 background 不支持简写。
+ nuve 中 background-image 优先级高于 background-color，这意味着同时设置 background-image 和 background-color，background-color 被覆盖。 background 不支持简写。
  
-> 只支持两种颜色的渐变，渐变方向如下：
+ 只支持两种颜色的渐变，渐变方向如下：
  
  | 渐变方向 | 描述 |
  | --- | --- |
@@ -147,7 +161,6 @@
 | icon | 左侧[图标名称](#/zh-CN/icon)或图片链接 | _string_ | - |
 | icon-prefix `v2.6.0` | 图标类名前缀，同 Icon 组件的 [class-prefix 属性](#/zh-CN/icon#props) | _string_ | `van-icon` |
 | icon-position `v2.10.7` | 图标展示位置，可选值为 `right` | _string_ | `left` |
-| tag | 按钮根节点的 HTML 标签 | _string_ | `button` |
 | block | 是否为块级元素 | _boolean_ | `false` |
 | plain | 是否为朴素按钮 | _boolean_ | `false` |
 | square | 是否为方形按钮 | _boolean_ | `false` |
@@ -158,15 +171,15 @@
 | loading-text | 加载状态提示文字 | _string_ | - |
 | loading-type | [加载图标类型](#/zh-CN/loading)，可选值为 `spinner` | _string_ | `circular` |
 | loading-size | 加载图标大小 | _string_ | `20px` |
-| to | 点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to) | _string \| object_ | - |
-| replace | 是否在跳转时替换当前页面历史 | _boolean_ | `false` |
+| to | 点击后跳转的目标路由对象 | _string \| object_ | - |
+| redirect | 是否在跳转时替换当前页面历史 | _boolean_ | `false` |
+| switch | 是否跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面。 | _boolean_ | `false` |
 
 ### Events
 
 | 事件名     | 说明                                     | 回调参数            |
 | ---------- | ---------------------------------------- | ------------------- |
-| click      | 点击按钮，且按钮状态不为加载或禁用时触发 | _event: Event_      |
-| touchstart | 开始触摸按钮时触发                       | _event: TouchEvent_ |
+| onclick      | 点击按钮，且按钮状态不为加载或禁用时触发 | _event: Event_      |
 
 ### Slots
 
@@ -177,7 +190,7 @@
 
 ### 样式变量
 
-组件提供了下列 Less 变量，可用于自定义样式，使用方法请参考[主题定制](#/zh-CN/theme)。
+组件提供了下列 Less 变量，可用于自定义样式
 
 | 名称                             | 默认值               | 描述 |
 | -------------------------------- | -------------------- | ---- |

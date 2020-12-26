@@ -3,29 +3,30 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "z-ui",
+                "backgroundColor": "#FFFFFF"
 			}
 		}
 	    ,{
-            "path" : "pages/zd-button/index",
-            "style" :                                                                                    
+            "path" : "pages/z-button/index",
+            "style" :
             {
-                "navigationBarTitleText": "",
+                "navigationBarTitleText": "按钮",
                 "enablePullDownRefresh": false
             }
-            
+
         }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "z-ui",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
 	"easycom": {
 	  "autoscan": true,
 	  "custom": {
-	    "zd-(.*)": "@/components/zd-ui/zd-$1/zd-$1.vue"
+	    "z-(.*)": "@/components/z-ui/z-$1/z-$1.vue"
 	  }
 	}
 }

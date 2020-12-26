@@ -1,0 +1,84 @@
+<template>
+	<view>
+        <z-demo-block title="按钮类型">
+            <z-button text="主要按钮" type="primary"></z-button>
+            <z-button text="信息按钮" type="info"></z-button>
+            <z-button text="默认按钮" type="default"></z-button>
+            <z-button text="危险按钮" type="danger"></z-button>
+            <z-button text="警告按钮" type="warning"></z-button>
+        </z-demo-block>
+
+        <z-demo-block title="朴素类型">
+            <z-button text="主要按钮" plain type="primary"></z-button>
+            <z-button text="信息按钮" plain type="info"></z-button>
+            <z-button text="默认按钮" plain type="default"></z-button>
+            <z-button text="危险按钮" plain type="danger"></z-button>
+            <z-button text="警告按钮" plain type="warning"></z-button>
+        </z-demo-block>
+
+        <z-demo-block title="细边框">
+            <z-button text="细边框按钮" plain hairline type="primary"></z-button>
+            <z-button text="细边框按钮" plain hairline type="info"></z-button>
+        </z-demo-block>
+
+        <z-demo-block title="禁用状态">
+            <z-button text="禁用状态" disabled type="primary"></z-button>
+            <z-button text="禁用状态" disabled type="info"></z-button>
+        </z-demo-block>
+
+        <z-demo-block title="按钮形状">
+            <z-button text="方形按钮" square type="primary"></z-button>
+            <z-button text="圆形按钮" round type="info"></z-button>
+        </z-demo-block>
+
+        <z-demo-block title="按钮尺寸">
+            <z-button text="大号按钮" size="large" type="primary"></z-button>
+            <z-button text="普通按钮" size="normal" type="primary"></z-button>
+            <z-button text="小型按钮" size="small" type="primary"></z-button>
+            <z-button text="迷你按钮" size="mini" type="primary"></z-button>
+        </z-demo-block>
+
+        <z-demo-block title="块级元素">
+            <z-button text="块级元素" block type="primary"></z-button>
+        </z-demo-block>
+
+        <z-demo-block title="自定义颜色">
+            <z-button text="单色按钮" color="#7232dd"></z-button>
+            <z-button text="单色按钮" color="#7232dd" plain></z-button>
+            <z-button text="渐变色按钮" color="linear-gradient(to bottom right,#AD18F9,#05DFC7)"></z-button>
+        </z-demo-block>
+
+        <z-demo-block title="跳转">
+            <z-button text="to" type="primary" to="/pages/index/index"></z-button>
+            <z-button text="click" type="info" @onclick="fnClick"></z-button>
+            <z-button text="redirect" type="default" to="/pages/index/index" redirect></z-button>
+            <z-button text="disabled" disabled type="warning" @onclick="fnClick"></z-button>
+        </z-demo-block>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+
+			};
+		},
+        methods: {
+            fnClick() {
+                uni.showToast({
+                    title: "click the button",
+                    icon: 'none'
+                })
+            }
+        }
+	}
+</script>
+
+<style lang="less">
+.test{
+    width: 100px;
+    height: 100px;
+    background-image:linear-gradient(to bottom right,#AD18F9,#05DFC7);
+}
+</style>

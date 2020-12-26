@@ -1,5 +1,5 @@
 <template>
-    <view class="zd-button" :class="classBtn" :style="styleBtn">
+    <view class="z-button" :class="classBtn" :style="styleBtn" @tap="_click">
         <text :class="classBtnText" :style="styleBtnText">{{ text }}</text>
     </view>
 </template>
@@ -46,6 +46,18 @@ export default {
         color: {
             type: String,
             default: ''
+        },
+        to: {
+            type: String,
+            default: ''
+        },
+        redirect: {
+            type: Boolean,
+            default: false
+        },
+        switch: {
+            type: Boolean,
+            default: false
         }
     },
     computed: {
@@ -53,9 +65,9 @@ export default {
             let className = '';
 
             if(this.plain) {
-                className = 'zd-button-' + this.type + '-plain';
+                className = 'z-button-' + this.type + '-plain';
             }else{
-                className = 'zd-button-' + this.type;
+                className = 'z-button-' + this.type;
             }
 
 
@@ -67,7 +79,7 @@ export default {
 
             className += this.round ? ' btn-round' : '';
 
-            className += ' zd-button-' + this.size;
+            className += ' z-button-' + this.size;
 
             className += this.block ? ' btn-block' : '';
             return className;
@@ -87,19 +99,18 @@ export default {
                 }
             }
 
-            console.log(result)
             return result;
         },
         classBtnText() {
             let btnTextClassName = '';
 
             if(this.plain) {
-                btnTextClassName += 'zd-button-'+ this.type +'-plain-text';
+                btnTextClassName += 'z-button-'+ this.type +'-plain-text';
             }else{
-                btnTextClassName += 'zd-button-'+ this.type +'-text';
+                btnTextClassName += 'z-button-'+ this.type +'-text';
             }
 
-            return btnTextClassName + ' zd-button-' + this.size + '-text';
+            return btnTextClassName + ' z-button-' + this.size + '-text';
         },
         styleBtnText() {
             if(this.color && !this.plain) {
@@ -112,10 +123,37 @@ export default {
                 }
             }
         }
+    },
+
+    methods: {
+        _click() {
+            if ( this.disabled ) return;
+
+            if(this.to) {
+                if(this.switch) {
+                    uni.switchTab({
+                        url: this.to
+                    });
+                    return;
+                }else if(this.redirect) {
+                    uni.redirectTo({
+                        url: this.to
+                    });
+                    return;
+                }else{
+                    uni.navigateTo({
+                        url: this.to
+                    });
+                    return;
+                }
+            }else{
+                this.$emit('onclick');
+            }
+        }
     }
 };
 </script>
 
 <style lang="less">
-@import './zd-button.less';
+@import './z-button.less';
 </style>
