@@ -13,6 +13,9 @@
                 <view class="block-item" @tap="fnGoTo('/pages/z-button/index')">
                     <text class="block-item-text">Button 按钮</text>
                 </view>
+                <view class="block-item" @tap="fnGoTo('/pages/z-loading/index')">
+                    <text class="block-item-text">Loading 加载</text>
+                </view>
             </view>
         </view>
 	</view>
@@ -60,6 +63,7 @@
         background-color: #f7f8fa;
         border-radius: 99px;
         flex-direction: row;
+        margin-bottom: 20rpx;
         &-text{
            color: #323233;
            font-weight: 600;

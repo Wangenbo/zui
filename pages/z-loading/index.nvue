@@ -1,0 +1,59 @@
+<template>
+    <view>
+        <z-demo-block title="加载类型">
+            <z-loading type="circular"/>
+            <z-loading type="spinner"/>
+            <z-loading type="specialdot"/>
+            <z-loading type="specialine"/>
+        </z-demo-block>
+
+        <z-demo-block title="自定义大小">
+            <z-loading type="circular" :size="18"/>
+            <z-loading type="circular" :size="30"/>
+        </z-demo-block>
+
+        <z-demo-block title="自定义颜色">
+            <z-loading type="circular" color="rgb(25, 137, 250)"/>
+            <z-loading type="circular" color="#4fc08d"/>
+        </z-demo-block>
+
+        <z-demo-block title="加载文案">
+            <z-loading type="circular" text="加载中..."/>
+        </z-demo-block>
+
+        <z-demo-block title="垂直排列">
+            <z-loading type="circular" text="加载中..." vertical/>
+        </z-demo-block>
+
+        <z-demo-block title="文字大小">
+            <z-loading type="circular" :text-size="18" text="加载中..." vertical/>
+        </z-demo-block>
+    </view>
+</template>
+
+<script>
+
+export default {
+    data() {
+        return {
+
+        };
+    },
+
+    onReady() {
+
+    },
+
+    methods: {
+
+    }
+};
+</script>
+
+<style lang="less">
+.border {
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+}
+</style>

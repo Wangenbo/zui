@@ -16,6 +16,15 @@
             }
 
         }
+        ,{
+            "path" : "pages/z-loading/index",
+            "style" :
+            {
+                "navigationBarTitleText": "Loading",
+                "enablePullDownRefresh": false
+            }
+
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
