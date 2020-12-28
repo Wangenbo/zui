@@ -2,9 +2,10 @@
 	<view class="page-container">
         <view class="page-container-title">
             <text class="page-container-title-text">Zui</text>
-            <text class="page-container-desc-text">适用于H5的高性能uni-app nvue UI组件</text>
+            <text class="page-container-desc-text">适用于 H5/nvue 的高性能uni-app UI组件</text>
         </view>
-
+        <!-- <text class="zicon" style="font-family: zicon">&#xe65d;</text>
+        <text class="zicon" style="font-family: vicon">&#xF000;</text> -->
         <view class="">
             <view class="">
                 <view class="section-header">
@@ -12,6 +13,9 @@
                 </view>
                 <view class="block-item" @tap="fnGoTo('/pages/z-button/index')">
                     <text class="block-item-text">Button 按钮</text>
+                </view>
+                <view class="block-item" @tap="fnGoTo('/pages/z-icon/index')">
+                    <text class="block-item-text">Icon 图标</text>
                 </view>
                 <view class="block-item" @tap="fnGoTo('/pages/z-loading/index')">
                     <text class="block-item-text">Loading 加载</text>

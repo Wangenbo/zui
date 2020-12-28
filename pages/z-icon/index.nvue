@@ -1,0 +1,102 @@
+<template>
+    <view>
+        <z-demo-block title="用法示例">
+            <view class="use-intro-block">
+                <view class="intro-block-item">
+                    <text class="intro-block-item-text">基础用法：</text>
+                    <z-icon name="chat-o" />
+                </view>
+
+                <view class="intro-block-item">
+                    <text class="intro-block-item-text">图标颜色：</text>
+                    <z-icon name="chat-o" color="rgb(25, 137, 250)" />
+                </view>
+
+                <view class="intro-block-item">
+                    <text class="intro-block-item-text">图标大小：</text>
+                    <z-icon name="chat-o" color="#ee0a24" size="36" />
+                </view>
+
+                <view class="intro-block-item">
+                    <text class="intro-block-item-text">点击事件：</text>
+                    <z-icon name="chat-o" size="36" @onclick="fnClick"/>
+                </view>
+            </view>
+        </z-demo-block>
+
+        <z-demo-block title="基础图标">
+            <view v-for="(value, name, index) in iconList" :key="'basic_' + index" v-if="index < 9" class="icon-wrap">
+                <z-icon :name="name" />
+                <text class="icon-text">{{ name }}</text>
+            </view>
+        </z-demo-block>
+
+        <z-demo-block title="线框风格">
+            <view v-for="(value, name, index) in iconList" :key="'outline_' + index" v-if="index >= 9 && index < 140" class="icon-wrap">
+                <z-icon :name="name" />
+                <text class="icon-text">{{ name }}</text>
+            </view>
+        </z-demo-block>
+
+        <z-demo-block title="实底风格">
+            <view v-for="(value, name, index) in iconList" :key="'filled_' + index" v-if="index >= 140 && index < 280" class="icon-wrap">
+                <z-icon :name="name" />
+                <text class="icon-text">{{ name }}</text>
+            </view>
+        </z-demo-block>
+    </view>
+</template>
+
+<script>
+import icon from '@/static/js/icon-config.js';
+
+export default {
+    data() {
+        return {
+            iconList: icon
+        };
+    },
+    methods: {
+        fnClick() {
+            uni.showToast({
+                title: "tap the icon success",
+                icon: "none"
+            })
+        }
+    }
+};
+</script>
+
+<style lang="less">
+.border {
+    border-width: 1px;
+    border-color: red;
+    border-style: solid;
+}
+.icon-text {
+    font-size: 14px;
+    color: #646566;
+    padding-top: 10px;
+}
+.icon-wrap {
+    width: 80px;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-right: 8px;
+}
+.use-intro-block {
+    flex: 1;
+    flex-direction: column;
+    padding-left: 10px;
+}
+.intro-block-item{
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.intro-block-item-text{
+    font-size: 14px;
+    color: rgba(69, 90, 100, 0.6);
+    padding-right: 10px;
+}
+</style>

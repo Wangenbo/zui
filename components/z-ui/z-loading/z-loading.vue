@@ -34,6 +34,10 @@ export default {
         textSize: {
             type: Number,
             default: 14
+        },
+        textColor: {
+            type: String,
+            default: '#c9c9c9'
         }
     },
     computed: {
@@ -61,7 +65,8 @@ export default {
         },
         textStyle() {
             return {
-                'font-size': this.textSize + 'px'
+                'font-size': this.textSize + 'px',
+                'color': this.textColor
             };
         }
     },

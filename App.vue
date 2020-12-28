@@ -22,5 +22,6 @@
 <style lang="less">
     /* #ifdef H5 */
     @import "/static/css/loading.css";
+    @import "/static/css/z-icon.css";
     /* #endif */
 </style>

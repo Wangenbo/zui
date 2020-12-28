@@ -1,41 +1,47 @@
 <template>
 	<view>
         <z-demo-block title="按钮类型">
-            <z-button text="主要按钮" type="primary"></z-button>
-            <z-button text="信息按钮" type="info"></z-button>
-            <z-button text="默认按钮" type="default"></z-button>
-            <z-button text="危险按钮" type="danger"></z-button>
-            <z-button text="警告按钮" type="warning"></z-button>
+            <z-button text="主要按钮" type="primary" class="btn-margin"></z-button>
+            <z-button text="信息按钮" type="info" class="btn-margin"></z-button>
+            <z-button text="默认按钮" type="default" class="btn-margin"></z-button>
+            <z-button text="危险按钮" type="danger" class="btn-margin"></z-button>
+            <z-button text="警告按钮" type="warning" class="btn-margin"></z-button>
         </z-demo-block>
 
         <z-demo-block title="朴素类型">
-            <z-button text="主要按钮" plain type="primary"></z-button>
-            <z-button text="信息按钮" plain type="info"></z-button>
-            <z-button text="默认按钮" plain type="default"></z-button>
-            <z-button text="危险按钮" plain type="danger"></z-button>
-            <z-button text="警告按钮" plain type="warning"></z-button>
+            <z-button text="主要按钮" plain type="primary" class="btn-margin"></z-button>
+            <z-button text="信息按钮" plain type="info" class="btn-margin"></z-button>
+            <z-button text="默认按钮" plain type="default" class="btn-margin"></z-button>
+            <z-button text="危险按钮" plain type="danger" class="btn-margin"></z-button>
+            <z-button text="警告按钮" plain type="warning" class="btn-margin"></z-button>
         </z-demo-block>
 
         <z-demo-block title="细边框">
-            <z-button text="细边框按钮" plain hairline type="primary"></z-button>
-            <z-button text="细边框按钮" plain hairline type="info"></z-button>
+            <z-button text="细边框按钮" plain hairline type="primary" class="btn-margin"></z-button>
+            <z-button text="细边框按钮" plain hairline type="info" class="btn-margin"></z-button>
         </z-demo-block>
 
         <z-demo-block title="禁用状态">
-            <z-button text="禁用状态" disabled type="primary"></z-button>
-            <z-button text="禁用状态" disabled type="info"></z-button>
+            <z-button text="禁用状态" disabled type="primary" class="btn-margin"></z-button>
+            <z-button text="禁用状态" disabled type="info" class="btn-margin"></z-button>
+        </z-demo-block>
+
+        <z-demo-block title="加载状态">
+            <z-button square type="primary" loading class="btn-margin"></z-button>
+            <z-button square type="primary" loading loading-type="circular" class="btn-margin"></z-button>
+            <z-button square type="primary" loading loading-type="circular" loading-text="加载中..." class="btn-margin"></z-button>
         </z-demo-block>
 
         <z-demo-block title="按钮形状">
-            <z-button text="方形按钮" square type="primary"></z-button>
-            <z-button text="圆形按钮" round type="info"></z-button>
+            <z-button text="方形按钮" square type="primary" class="btn-margin"></z-button>
+            <z-button text="圆形按钮" round type="info" class="btn-margin"></z-button>
         </z-demo-block>
 
         <z-demo-block title="按钮尺寸">
-            <z-button text="大号按钮" size="large" type="primary"></z-button>
-            <z-button text="普通按钮" size="normal" type="primary"></z-button>
-            <z-button text="小型按钮" size="small" type="primary"></z-button>
-            <z-button text="迷你按钮" size="mini" type="primary"></z-button>
+            <z-button text="大号按钮" size="large" type="primary" class="btn-margin"></z-button>
+            <z-button text="普通按钮" size="normal" type="primary" class="btn-margin"></z-button>
+            <z-button text="小型按钮" size="small" type="primary" class="btn-margin"></z-button>
+            <z-button text="迷你按钮" size="mini" type="primary" class="btn-margin"></z-button>
         </z-demo-block>
 
         <z-demo-block title="块级元素">
@@ -49,10 +55,10 @@
         </z-demo-block>
 
         <z-demo-block title="跳转">
-            <z-button text="to" type="primary" to="/pages/index/index"></z-button>
-            <z-button text="click" type="info" @onclick="fnClick"></z-button>
-            <z-button text="redirect" type="default" to="/pages/index/index" redirect></z-button>
-            <z-button text="disabled" disabled type="warning" @onclick="fnClick"></z-button>
+            <z-button text="to" type="primary" to="/pages/index/index" class="btn-margin"></z-button>
+            <z-button text="click" type="info" @onclick="fnClick" class="btn-margin"></z-button>
+            <z-button text="redirect" type="default" to="/pages/index/index" redirect class="btn-margin"></z-button>
+            <z-button text="disabled" disabled type="warning" @onclick="fnClick" class="btn-margin"></z-button>
         </z-demo-block>
 	</view>
 </template>
@@ -80,5 +86,9 @@
     width: 100px;
     height: 100px;
     background-image:linear-gradient(to bottom right,#AD18F9,#05DFC7);
+}
+.btn-margin{
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 </style>

@@ -5,6 +5,11 @@ function addFont(){
         fontFamily: 'zicon',
         src: "url('/static/font/loading.ttf')"
     });
+
+    dom.addRule('fontFace', {
+        fontFamily: 'vicon',
+        src: "url('/static/font/z-icon.ttf')"
+    });
     // #endif
 }
 export {
