@@ -1,13 +1,16 @@
 <template>
 
     <view class="z-button" :class="classBtn" :style="styleBtn" @tap="_click">
+        <text :class="classIconText" class="btn-pre-icon" :style="{'font-family': 'vicon', 'font-size': iconSize}" v-if="icon && iconPosition === 'left'">{{icons[icon]}}</text>
         <text :class="classBtnText" :style="styleBtnText">{{ text }}</text>
         <z-loading color="#fff" v-if="loading" :type="loadingType" :text="loadingText" text-color="#fff"/>
+        <text :class="classIconText" class="btn-pre-icon" :style="{'font-family': 'vicon', 'font-size': iconSize}" v-if="icon && iconPosition === 'right'">{{icons[icon]}}</text>
     </view>
 
 </template>
 
 <script>
+import icons from '@/static/js/icon-config.js';
 export default {
     props: {
         text: {
@@ -77,6 +80,18 @@ export default {
         customerClass: {
             type: String,
             default: ''
+        },
+        icon: {
+            type: String,
+            default: ''
+        },
+        iconSize: {
+            type: [String, Number],
+            default: 22
+        },
+        iconPosition: {
+            type: String,
+            default: 'left'
         }
     },
     computed: {
@@ -140,6 +155,16 @@ export default {
 
             return btnTextClassName + ' z-button-' + this.size + '-text';
         },
+        classIconText() {
+            let result = '';
+
+            if(this.text !== '' && this.iconPosition === 'left') {
+                result = ' btn-padding-right';
+            }else if(this.text !== '' && this.iconPosition === 'right') {
+                result = ' btn-padding-left';
+            }
+            return this.classBtnText + result;
+        },
         styleBtnText() {
             if(this.color && !this.plain) {
                 return {
@@ -150,6 +175,12 @@ export default {
                     'color': this.color
                 }
             }
+        }
+    },
+
+    data() {
+        return {
+            icons: icons
         }
     },
 

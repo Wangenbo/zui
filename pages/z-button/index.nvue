@@ -37,6 +37,13 @@
             <z-button text="圆形按钮" round type="info" class="btn-margin"></z-button>
         </z-demo-block>
 
+        <z-demo-block title="图标按钮">
+            <z-button type="primary" icon="plus" class="btn-margin" icon-size="18"/>
+            <z-button text="按钮" type="primary" icon="plus" class="btn-margin"/>
+            <z-button text="按钮" type="info" plain icon="friends-o" class="btn-margin"/>
+            <z-button text="按钮" type="info" plain icon="friends-o" icon-position="right"/>
+        </z-demo-block>
+
         <z-demo-block title="按钮尺寸">
             <z-button text="大号按钮" size="large" type="primary" class="btn-margin"></z-button>
             <z-button text="普通按钮" size="normal" type="primary" class="btn-margin"></z-button>

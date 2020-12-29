@@ -70,25 +70,23 @@
 
 ### 图标按钮
 
-通过 `icon` 属性设置按钮图标，支持 Icon 组件里的所有图标，也可以传入图标 URL。
+通过 `icon` 属性设置按钮图标，支持 Icon 组件里的所有图标。
 
 ```html
 <zd-button icon="plus" type="primary" />
-<zd-button icon="plus" type="primary">按钮</zd-button>
-<zd-button icon="https://img.yzcdn.cn/vant/user-active.png" type="primary">
-  按钮
-</zd-button>
+<z-button type="primary" icon="plus"/>
+<z-button text="按钮" type="primary" icon="plus"/>
+<z-button text="按钮" type="info" plain icon="friends-o"/>
+<z-button text="按钮" type="info" plain icon="friends-o"/>
 ```
 
 ### 按钮尺寸
 
-支持 `large`、`normal`、`small`、`mini` 四种尺寸，默认为 `normal`。
+支持 `Number`、`String`，默认为 `22`。
 
 ```html
-<zd-button type="primary" size="large">大号按钮</zd-button>
-<zd-button type="primary" size="normal">普通按钮</zd-button>
-<zd-button type="primary" size="small">小型按钮</zd-button>
-<zd-button type="primary" size="mini">迷你按钮</zd-button>
+<zd-button type="primary" size="22">大号按钮</zd-button>
+<zd-button type="primary" size="30">普通按钮</zd-button>
 ```
 
 ### 块级元素

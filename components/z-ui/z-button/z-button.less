@@ -6,6 +6,7 @@
 }
 .z-button {
     height: @button-default-height;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     padding: @padding-md;
@@ -13,7 +14,7 @@
     &:active {
         opacity: 0.5;
     }
-    
+
     &-loading{
         &:active {
             opacity: 1;
@@ -151,4 +152,13 @@
 
 .btn-block {
     flex: 1;
+}
+.btn-pre-icon{
+    font-weight: bold;
+}
+.btn-padding-right{
+    padding-right: 5px;
+}
+.btn-padding-left{
+    padding-left: 5px;
 }
