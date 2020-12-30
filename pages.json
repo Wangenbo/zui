@@ -27,12 +27,21 @@
         }
         ,{
             "path" : "pages/z-icon/index",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "图标",
                 "enablePullDownRefresh": false
             }
-            
+
+        }
+        ,{
+            "path" : "pages/layout/index",
+            "style" :
+            {
+                "navigationBarTitleText": "布局",
+                "enablePullDownRefresh": false
+            }
+
         }
     ],
 	"globalStyle": {

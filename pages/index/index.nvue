@@ -20,6 +20,9 @@
                 <view class="block-item" @tap="fnGoTo('/pages/z-loading/index')">
                     <text class="block-item-text">Loading 加载</text>
                 </view>
+                <view class="block-item" @tap="fnGoTo('/pages/layout/index')">
+                    <text class="block-item-text">Layout 布局</text>
+                </view>
             </view>
         </view>
 	</view>
