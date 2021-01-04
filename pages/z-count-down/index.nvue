@@ -1,0 +1,46 @@
+<template>
+    <view>
+        <z-demo-block title="一般用法">
+            <z-count-down :timestamp="today" :show-days="true" :separator="'zh'"></z-count-down>
+        </z-demo-block>
+        <z-demo-block title="不显示天数">
+            <z-count-down :timestamp="tohous"></z-count-down>
+        </z-demo-block>
+        <z-demo-block title="修改颜色">
+            <z-count-down :timestamp="today" :bg-color="'#4395ff'" :color="'#fff'" :separatorColor="'rgba(255, 127, 0, 1)'"></z-count-down>
+        </z-demo-block>
+        <z-demo-block title="修改大小">
+            <z-count-down :timestamp="today" :height="50" :font-size="30"></z-count-down>
+        </z-demo-block>
+        <z-demo-block title="停止事件回掉">
+            <z-count-down :timestamp="tenSeconds" @end="watchEnd"></z-count-down>
+        </z-demo-block>
+    </view>
+</template>
+
+<script>
+    export default {
+        data () {
+            return {
+                today: '',
+                tohous: ''
+            }
+        },
+        mounted() {
+            this.today = 86400 * 2;
+            this.tohous = 2 * 60 * 1000 ;
+            this.tenSeconds = 10;
+        },
+        methods: {
+            watchEnd () {
+                uni.showToast({
+                    title: '监听停止回掉',
+                    icon: 'none'
+                })
+            }
+        }
+    }
+</script>
+
+<style lang="less" scoped>
+</style>
