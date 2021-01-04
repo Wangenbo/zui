@@ -24,4 +24,9 @@
     @import "/static/css/loading.css";
     @import "/static/css/z-icon.css";
     /* #endif */
+    .border {
+        border-width: 1px;
+        border-color: red;
+        border-style: solid;
+    }
 </style>
