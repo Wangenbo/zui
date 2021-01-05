@@ -1,0 +1,27 @@
+@font-face {font-family: "zicon";
+  src: url('/static/font/loading.ttf?t=1609048967637') format('truetype'); /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+}
+
+.zicon {
+  font-family: "zicon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconloading2:before {
+  content: "\e663";
+}
+
+.iconloading4:before {
+  content: "\e61c";
+}
+
+.iconLoading:before {
+  content: "\e65d";
+}
+
+.iconloading7:before {
+  content: "\e65b";
+}
