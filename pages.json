@@ -43,6 +43,15 @@
             }
 
         }
+        ,{
+            "path" : "pages/z-count-down/index",
+            "style" :
+            {
+                "navigationBarTitleText": "倒计时",
+                "enablePullDownRefresh": false
+            }
+
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

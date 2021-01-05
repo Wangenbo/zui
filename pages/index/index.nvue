@@ -23,6 +23,10 @@
                 <view class="block-item" @tap="fnGoTo('/pages/layout/index')">
                     <text class="block-item-text">Layout 布局</text>
                 </view>
+				<view class="block-item" @tap="fnGoTo('/pages/z-count-down/index')">
+				    <text class="block-item-text">倒计时</text>
+				</view>
+                
             </view>
         </view>
 	</view>
