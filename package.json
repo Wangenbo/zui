@@ -33,5 +33,6 @@
     "*.{ts,tsx,js,vue,less}": "prettier --write",
     "*.{ts,tsx,js,vue}": "eslint --fix",
     "*.{vue,css,less}": "stylelint --fix"
-  }
+  },
+  "dependencies": {}
 }

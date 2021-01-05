@@ -52,6 +52,16 @@
             }
 
         }
+        ,{
+            "path" : "pages/z-cell/index",
+            "style" :
+            {
+                "navigationBarTitleText": "Cell 单元格",
+                "enablePullDownRefresh": false,
+                "backgroundColor": "#f7f8fa"
+            }
+
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
