@@ -35,14 +35,16 @@
 </template>
 
 <script>
+    import wxLogger from '@/utils/monitor';
+
 	export default {
 		data() {
 			return {
 				title: 'Hello'
 			}
 		},
-		onLoad() {
-
+		onReady() {
+            wxLogger.api('/search.do', true, 233, 'SUCCESS');
 		},
 		methods: {
             fnGoTo(url) {

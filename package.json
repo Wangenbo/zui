@@ -34,5 +34,7 @@
     "*.{ts,tsx,js,vue}": "eslint --fix",
     "*.{vue,css,less}": "stylelint --fix"
   },
-  "dependencies": {}
+  "dependencies": {
+    "alife-logger": "^1.8.26"
+  }
 }
