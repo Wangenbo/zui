@@ -51,6 +51,14 @@
                 "enablePullDownRefresh": false
             }
 
+        },{
+            "path" : "pages/z-divider/index",
+            "style" :
+            {
+                "navigationBarTitleText": "分割线",
+                "enablePullDownRefresh": false
+            }
+
         }
     ],
 	"globalStyle": {

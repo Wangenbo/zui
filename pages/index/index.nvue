@@ -24,9 +24,11 @@
                     <text class="block-item-text">Layout 布局</text>
                 </view>
 				<view class="block-item" @tap="fnGoTo('/pages/z-count-down/index')">
-				    <text class="block-item-text">倒计时</text>
+				    <text class="block-item-text">CountDown  倒计时</text>
 				</view>
-                
+                <view class="block-item" @tap="fnGoTo('/pages/z-divider/index')">
+                    <text class="block-item-text">Divider  分割线</text>
+                </view>   
             </view>
         </view>
 	</view>

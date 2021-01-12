@@ -12,7 +12,7 @@
         <z-demo-block title="修改大小">
             <z-count-down :timestamp="today" :height="50" :font-size="30"></z-count-down>
         </z-demo-block>
-        <z-demo-block title="停止事件回掉">
+        <z-demo-block title="监听倒计时结束">
             <z-count-down :timestamp="tenSeconds" @end="watchEnd"></z-count-down>
         </z-demo-block>
     </view>
@@ -34,7 +34,7 @@
         methods: {
             watchEnd () {
                 uni.showToast({
-                    title: '监听停止回掉',
+                    title: '倒计时结束',
                     icon: 'none'
                 })
             }
@@ -42,5 +42,10 @@
     }
 </script>
 
-<style lang="less" scoped>
+<style scoped>
+/* #ifdef H5 */
+page {
+   background-color: rgb(248, 248, 248);
+}
+/* #endif */
 </style>
