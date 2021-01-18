@@ -38,6 +38,9 @@
 <script>
 /**
  * countDown 倒计时
+ * @Author: along
+ * @Date: 2020-01-06
+ * @Last Modified by: along
  * @description 该组件一般使用于某个活动的截止时间上，通过数字的变化，给用户明确的时间感受，提示用户进行某一个行为操作。
  * @property {String Number} timestamp 倒计时，单位为秒
  * @property {Boolean} autoplay 是否自动开始倒计时，如果为false，需手动调用开始方法。（默认true）

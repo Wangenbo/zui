@@ -1,0 +1,102 @@
+<template>
+	<view>
+        <z-demo-block title="基础用法">
+            <z-divider></z-divider>
+        </z-demo-block>
+        <z-demo-block title="展示文本">
+            <view class="z-demo-wrap">
+                <view class="z-demo-item">
+                    <z-divider>掌上大学</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider>已经到底了</z-divider>
+                </view>
+            </view>
+        </z-demo-block>
+        <z-demo-block title="单边线宽">
+            <view class="z-demo-wrap">
+                <view class="z-demo-item">
+                    <z-divider :half-width="150">150</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider :half-width="200">200</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider :half-width="300">300</z-divider>
+                </view>
+            </view>
+        </z-demo-block>
+        <z-demo-block title="横条颜色">
+            <view class="z-demo-wrap">
+                <view class="z-demo-item">
+                    <z-divider type="primary">primary</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider type="info">info</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider type="success">success</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider type="warning">warning</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider type="error">error</z-divider>
+                </view>
+            </view>
+        </z-demo-block>
+        <z-demo-block title="基础样式">
+            <view class="z-demo-wrap">
+                <view class="z-demo-item">
+                    <z-divider :fontSize="36">字体大小</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider :color="'red'">字体颜色</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider :bg-color="'#000'">背景</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider :margin-top="30" :margin-bottom="30">上下边距30</z-divider>
+                </view>
+                <view class="z-demo-item">
+                    <z-divider :height="100" :bg-color="'#000'">高度100</z-divider>
+                </view>
+            </view>
+        </z-demo-block>
+        <z-demo-block title="点击监听">
+            <z-divider @click="clickDivider">点击监听</z-divider>
+        </z-demo-block>
+	</view>
+</template>
+
+<script>
+	export default {
+        methods: {
+            clickDivider () {
+                uni.showToast({
+                    title: '我被点击了',
+                    icon: 'none'
+                })
+            }
+        }
+	}
+</script>
+
+<style lang="less">
+/* #ifdef H5 */
+page {
+   background-color: rgb(248, 248, 248);
+}
+/* #endif */
+.z-demo-wrap {
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+}
+.z-demo-item {
+    width: 710rpx;
+    flex-direction: row;
+    justify-content: center;
+}
+</style>
