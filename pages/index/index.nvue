@@ -23,26 +23,31 @@
                 <view class="block-item" @tap="fnGoTo('/pages/layout/index')">
                     <text class="block-item-text">Layout 布局</text>
                 </view>
-				<view class="block-item" @tap="fnGoTo('/pages/z-count-down/index')">
-				    <text class="block-item-text">CountDown  倒计时</text>
-				</view>
+                <view class="block-item" @tap="fnGoTo('/pages/z-count-down/index')">
+                    <text class="block-item-text">CountDown  倒计时</text>
+                </view>
                 <view class="block-item" @tap="fnGoTo('/pages/z-divider/index')">
                     <text class="block-item-text">Divider  分割线</text>
                 </view>   
-            </view>
+                <view class="block-item" @tap="fnGoTo('/pages/z-cell/index')">
+                    <text class="block-item-text">Cell 单元格</text>
+                </view>
+             </view>
         </view>
 	</view>
 </template>
 
 <script>
+    import wxLogger from '@/utils/monitor';
+
 	export default {
 		data() {
 			return {
 				title: 'Hello'
 			}
 		},
-		onLoad() {
-
+		onReady() {
+            wxLogger.api('/search.do', true, 233, 'SUCCESS');
 		},
 		methods: {
             fnGoTo(url) {

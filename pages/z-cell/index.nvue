@@ -1,0 +1,78 @@
+<template>
+	<view>
+        <z-demo-block title="基础用法">
+            <z-cell-group>
+                <z-cell class="demo-cell" title="单元格" value="内容"></z-cell>
+            </z-cell-group>
+        </z-demo-block>
+
+        <z-demo-block title="展示图标">
+            <z-cell class="demo-cell" icon="location-o" title="单元格" value="内容"></z-cell>
+        </z-demo-block>
+
+        <z-demo-block title="描述信息">
+            <z-cell class="demo-cell" title="单元格" value="内容" label="描述信息"></z-cell>
+        </z-demo-block>
+
+        <z-demo-block title="只设置value">
+            <z-cell class="demo-cell" value="内容"></z-cell>
+        </z-demo-block>
+
+        <z-demo-block title="展示箭头" vertical>
+            <z-cell class="demo-cell demo-cell-item" is-link title="单元格" value="内容"></z-cell>
+            <z-cell class="demo-cell demo-cell-item" is-link arrow-direction="up" title="单元格" value="内容"></z-cell>
+            <z-cell class="demo-cell demo-cell-item" is-link arrow-direction="left" title="单元格" value="内容"></z-cell>
+            <z-cell class="demo-cell" is-link arrow-direction="down" title="单元格" value="内容"></z-cell>
+        </z-demo-block>
+
+        <z-demo-block title="点击反馈">
+            <z-cell class="demo-cell" title="单元格" value="内容" clickable></z-cell>
+        </z-demo-block>
+
+        <z-demo-block title="页面导航" vertical>
+            <z-cell class="demo-cell demo-cell-item" title="to" is-link clickable to="/pages/index/index"></z-cell>
+            <z-cell class="demo-cell" title="replace" is-link clickable to="/pages/index/index" redirect></z-cell>
+        </z-demo-block>
+
+        <z-demo-block title="使用插槽">
+            <z-cell class="demo-cell" title="单元格" value="内容">
+                <template slot="prefix">
+                    <z-icon name="chat-o" :size="18" color="#969799"></z-icon>
+                </template>
+
+                <template slot="suffix">
+                    <z-icon name="chat-o" :size="18" color="#969799"></z-icon>
+                </template>
+            </z-cell>
+        </z-demo-block>
+
+        <z-demo-block title="分组标题" vertical>
+            <z-cell-group title="分组1">
+              <z-cell title="单元格" value="内容" class="demo-cell"/>
+            </z-cell-group>
+            <z-cell-group title="分组2">
+              <z-cell title="单元格" value="内容" class="demo-cell"/>
+            </z-cell-group>
+        </z-demo-block>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+
+			};
+		}
+	}
+</script>
+
+<style lang="less">
+.demo-cell{
+    margin-left: -30rpx;
+    margin-right: -30rpx;
+}
+.demo-cell-item{
+    margin-bottom: 10rpx;
+}
+</style>

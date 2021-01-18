@@ -3,7 +3,7 @@
         <view class="demo-block-title">
             <text class="demo-block-title-text">{{title}}</text>
         </view>
-        <view class="demo-block-content">
+        <view class="demo-block-content" :class="vertical ? 'demo-block-content-vertical' : 'demo-block-content-not-vertical'">
             <slot></slot>
         </view>
     </view>
@@ -15,6 +15,10 @@
             title: {
                 type: String,
                 default: ''
+            },
+            vertical: {
+                type: Boolean,
+                default: false
             }
 
         },
@@ -39,8 +43,13 @@
             }
         }
         &-content{
-            flex-direction: row;
             flex-wrap: wrap;
+            &-vertical{
+                flex-direction: column;
+            }
+            &-not-vertical {
+                flex-direction: row;
+            }
         }
     }
 </style>
